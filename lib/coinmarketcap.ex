@@ -1,18 +1,7 @@
-defmodule Coinmarketcap do
-  @moduledoc """
-  Documentation for Coinmarketcap.
-  """
-
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> Coinmarketcap.hello
-      :world
-
-  """
-  def hello do
-    :world
+defmodule CoinMarketCap do
+  def data_dump do
+    HTTPoison.start
+    %HTTPoison.Response{body: body} = HTTPoison.get! "https://api.coinmarketcap.com/v1/ticker/"
+    Poison.decode!(body)
   end
 end
