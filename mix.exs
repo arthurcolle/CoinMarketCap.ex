@@ -18,7 +18,7 @@ defmodule Coinmarketcap.Mixfile do
     [
       {:hackney, "1.6.1", [override: true]},
       {:httpoison, "~> 0.11.0"},
-      {:poison,    "~> 3.0.0"}
+      {:poison,    "~> 3.1.0"}
     ]
   end
 end
